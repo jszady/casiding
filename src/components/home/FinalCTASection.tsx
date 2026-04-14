@@ -5,13 +5,13 @@ import { site } from "@/lib/site";
 
 export function FinalCTASection() {
   return (
-    <section className="border-b border-border bg-accent py-20 text-white sm:py-24">
+    <section className="border-b border-border bg-accent py-24 text-white sm:py-28">
       <Container>
         <MotionReveal className="max-w-3xl">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/75">
             Trade buyers
           </p>
-          <h2 className="mt-4 font-sans text-3xl font-semibold tracking-tight sm:text-4xl">
+          <h2 className="mt-4 font-sans text-4xl font-bold tracking-tight sm:text-[2.75rem] sm:leading-[1.12]">
             Source the right siding products for upcoming builds
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-white/85">

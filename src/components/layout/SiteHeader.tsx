@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -25,21 +26,23 @@ export function SiteHeader() {
   }, [open]);
 
   const barClass = scrolled
-    ? "border-b border-border bg-card/95 shadow-sm backdrop-blur-md"
+    ? "border-b border-border bg-card/95 shadow-[0_1px_2px_rgba(25,24,23,0.06)] backdrop-blur-md"
     : "border-b border-transparent bg-transparent";
 
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-[background,box-shadow,border-color] duration-300 ${barClass}`}
     >
-      <div className="mx-auto flex h-[72px] max-w-6xl items-center justify-between px-5 sm:px-6 lg:px-8">
-        <Link href="/" className="group flex items-baseline gap-1.5">
-          <span className="font-sans text-lg font-semibold tracking-tight text-foreground">
-            {site.name}
-          </span>
-          <span className="hidden text-xs font-medium uppercase tracking-[0.18em] text-muted sm:inline">
-            Supply
-          </span>
+      <div className="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-6 sm:px-8 lg:px-10">
+        <Link href="/" className="group inline-flex items-center">
+          <Image
+            src="/images/casiding.jpg"
+            alt={`${site.name} logo`}
+            width={220}
+            height={58}
+            priority
+            className="h-10 w-auto"
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Main">
@@ -47,7 +50,7 @@ export function SiteHeader() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-[15px] font-medium text-stone-700 transition-colors hover:text-foreground"
+            className="text-[15px] font-medium text-muted transition-colors hover:text-foreground"
             >
               {link.label}
             </Link>
@@ -60,7 +63,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-border bg-card text-foreground lg:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border bg-card text-foreground lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-menu"
           onClick={() => setOpen((v) => !v)}
@@ -95,14 +98,14 @@ export function SiteHeader() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="rounded-sm px-3 py-3 text-[15px] font-medium text-stone-800 hover:bg-zinc-50"
+                  className="rounded-md px-3 py-3 text-[15px] font-medium text-foreground hover:bg-zinc-50"
                   onClick={() => setOpen(false)}
                 >
                   {link.label}
                 </Link>
               ))}
               <div className="pt-2">
-                <Button href="/contact" className="w-full">
+                <Button href="/contact" className="w-full" onClick={() => setOpen(false)}>
                   Request a Quote
                 </Button>
               </div>

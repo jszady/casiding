@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --background: #f7f7f6;
-  --foreground: #1c1917;
-  --muted: #57534e;
-  --border: #e4e4e7;
+  --background: #f8f8f7;
+  --foreground: #191817;
+  --muted: #5a5854;
+  --border: #e5e4e2;
   --card: #ffffff;
   /* Slate with subtle warmth—industrial, architectural */
-  --accent: #334155;
-  --accent-hover: #1e293b;
-  --accent-muted: rgba(51, 65, 85, 0.09);
+  --accent: #2f3f52;
+  --accent-hover: #223143;
+  --accent-muted: rgba(47, 63, 82, 0.12);
   --accent-copper: #7c4d38;
 }
 

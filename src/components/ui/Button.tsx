@@ -4,14 +4,14 @@ import { type ReactNode } from "react";
 type Variant = "primary" | "secondary" | "ghost";
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-sm px-5 py-3 text-[15px] font-semibold tracking-tight transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
+  "inline-flex items-center justify-center gap-2 rounded-md px-6 py-3.5 text-[15px] font-semibold tracking-tight transition-[background-color,transform,box-shadow,color] duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-accent text-white shadow-sm hover:bg-accent-hover focus-visible:outline-accent",
+    "bg-accent text-white shadow-[0_1px_2px_rgba(25,24,23,0.1)] hover:-translate-y-px hover:bg-accent-hover hover:shadow-[0_8px_20px_-16px_rgba(25,24,23,0.4)] focus-visible:outline-accent",
   secondary:
-    "border border-border bg-card text-foreground shadow-sm hover:bg-stone-50",
-  ghost: "text-foreground hover:bg-stone-100/80",
+    "border border-border bg-card text-foreground shadow-[0_1px_2px_rgba(25,24,23,0.06)] hover:-translate-y-px hover:bg-stone-50 hover:shadow-[0_8px_20px_-16px_rgba(25,24,23,0.3)]",
+  ghost: "text-foreground hover:bg-stone-100/80 hover:-translate-y-px",
 };
 
 type ButtonProps = {
@@ -37,7 +37,7 @@ export function Button({
 
   if (href) {
     return (
-      <Link href={href} className={cls}>
+      <Link href={href} className={cls} onClick={onClick}>
         {children}
       </Link>
     );

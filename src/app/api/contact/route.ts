@@ -96,6 +96,14 @@ export async function POST(request: Request) {
       </div>
     `;
 
+    if (process.env.NODE_ENV === "development") {
+      // Temporary sender audit log for local verification.
+      console.log("RESEND SEND CONFIG:", {
+        to: contactToEmail,
+        from: contactFromEmail,
+      });
+    }
+
     const resendResponse = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {

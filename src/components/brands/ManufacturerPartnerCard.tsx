@@ -13,10 +13,10 @@ export function ManufacturerPartnerCard({
 
   if (variant === "featured") {
     return (
-      <div className="group flex h-full flex-col border border-border bg-background p-6">
+      <div className="group flex h-full flex-col rounded-md border border-border bg-background p-7 transition-[transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_28px_-20px_rgba(25,24,23,0.32)]">
         <div className="transition-[filter,opacity] duration-300 ease-out grayscale opacity-[0.72] group-hover:grayscale-0 group-hover:opacity-100">
           <div
-            className="flex h-16 w-16 items-center justify-center rounded-sm border border-border bg-zinc-50 font-sans text-lg font-semibold"
+            className="flex h-16 w-16 items-center justify-center rounded-md border border-border bg-zinc-50 font-sans text-lg font-semibold"
             style={{ color: brandColor }}
             aria-hidden
           >
@@ -37,10 +37,10 @@ export function ManufacturerPartnerCard({
   }
 
   return (
-    <div className="group flex h-full items-center gap-4 border border-border bg-card px-5 py-5 shadow-sm">
+    <div className="group flex h-full items-center gap-4 rounded-md border border-border bg-card px-6 py-6 shadow-[0_1px_2px_rgba(25,24,23,0.06)] transition-[transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_28px_-20px_rgba(25,24,23,0.32)]">
       <div className="shrink-0 transition-[filter,opacity] duration-300 ease-out grayscale opacity-[0.72] group-hover:grayscale-0 group-hover:opacity-100">
         <div
-          className="flex h-14 w-14 items-center justify-center rounded-sm border border-border bg-zinc-50 font-sans text-sm font-semibold"
+          className="flex h-14 w-14 items-center justify-center rounded-md border border-border bg-zinc-50 font-sans text-sm font-semibold"
           style={{ color: brandColor }}
           aria-hidden
         >

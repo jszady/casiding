@@ -19,23 +19,23 @@ export function SectionHeading({
 
   return (
     <div
-      className={`mb-12 max-w-2xl space-y-4 sm:mb-16 ${align === "center" ? "mx-auto" : ""}`}
+      className={`mb-14 max-w-3xl space-y-5 sm:mb-20 ${align === "center" ? "mx-auto" : ""}`}
     >
       {eyebrow ? (
         <p
-          className={`text-xs font-semibold uppercase tracking-[0.2em] text-accent ${alignClass}`}
+          className={`text-[11px] font-semibold uppercase tracking-[0.22em] text-accent ${alignClass}`}
         >
           {eyebrow}
         </p>
       ) : null}
       <h2
-        className={`font-sans text-3xl font-semibold tracking-tight text-foreground sm:text-4xl ${alignClass}`}
+        className={`font-sans text-4xl font-bold tracking-tight text-foreground sm:text-[2.75rem] sm:leading-[1.1] ${alignClass}`}
       >
         {title}
       </h2>
       {description ? (
         <p
-          className={`text-lg leading-relaxed text-muted ${alignClass} ${align === "center" ? "max-w-2xl" : ""}`}
+          className={`max-w-2xl text-[1.05rem] leading-relaxed text-muted ${alignClass} ${align === "center" ? "mx-auto" : ""}`}
         >
           {description}
         </p>

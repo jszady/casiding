@@ -6,7 +6,7 @@ import { audiences } from "@/lib/who-we-serve";
 
 export function WhoWeServePreview() {
   return (
-    <section className="border-b border-border bg-card py-20 sm:py-24">
+    <section className="border-b border-border bg-card py-24 sm:py-28">
       <Container>
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
@@ -24,11 +24,11 @@ export function WhoWeServePreview() {
           </Link>
         </div>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {audiences.map((a, i) => (
             <MotionReveal key={a.title} delay={i * 0.05}>
-              <article className="h-full border border-border bg-background p-6">
-                <h3 className="font-sans text-lg font-semibold tracking-tight text-foreground">
+              <article className="h-full rounded-md border border-border bg-background p-7 transition-[transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_28px_-20px_rgba(25,24,23,0.32)]">
+                <h3 className="font-sans text-xl font-semibold tracking-tight text-foreground">
                   {a.title}
                 </h3>
                 <p className="mt-3 text-[15px] leading-relaxed text-muted">{a.description}</p>

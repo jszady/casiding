@@ -13,23 +13,23 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main>
-      <section className="border-b border-border bg-background py-16 sm:py-20">
+      <section className="border-b border-border bg-background py-20 sm:py-24">
         <Container>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">About</p>
-          <h1 className="mt-4 max-w-3xl font-sans text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+          <h1 className="mt-5 max-w-4xl font-sans text-5xl font-bold tracking-tight text-foreground sm:text-[3.45rem] sm:leading-[1.08]">
             A supply partner for modern exterior procurement
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
+          <p className="mt-7 max-w-2xl text-lg leading-relaxed text-muted">
             {site.companySummary}
           </p>
         </Container>
       </section>
 
-      <section className="border-b border-border bg-card py-16 sm:py-20">
+      <section className="border-b border-border bg-card py-20 sm:py-24">
         <Container>
           <div className="grid gap-12 lg:grid-cols-2">
             <MotionReveal>
-              <h2 className="font-sans text-2xl font-semibold tracking-tight text-foreground">
+              <h2 className="font-sans text-3xl font-semibold tracking-tight text-foreground">
                 What we focus on
               </h2>
               <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted">
@@ -47,7 +47,7 @@ export default function AboutPage() {
               </div>
             </MotionReveal>
             <MotionReveal delay={0.06}>
-              <h2 className="font-sans text-2xl font-semibold tracking-tight text-foreground">
+              <h2 className="font-sans text-3xl font-semibold tracking-tight text-foreground">
                 How we work with teams
               </h2>
               <ul className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted">
@@ -74,8 +74,8 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="bg-background py-16 sm:py-20">
-        <Container className="flex flex-col items-start justify-between gap-8 border border-border bg-card p-8 shadow-sm sm:flex-row sm:items-center sm:p-10">
+      <section className="bg-background py-20 sm:py-24">
+        <Container className="flex flex-col items-start justify-between gap-8 rounded-md border border-border bg-card p-9 shadow-[0_1px_2px_rgba(25,24,23,0.05)] sm:flex-row sm:items-center sm:p-11">
           <div>
             <h2 className="font-sans text-2xl font-semibold tracking-tight text-foreground">
               Review materials for an upcoming bid?

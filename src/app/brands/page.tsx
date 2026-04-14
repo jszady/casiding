@@ -15,13 +15,13 @@ export const metadata: Metadata = {
 export default function BrandsPage() {
   return (
     <main>
-      <section className="border-b border-border bg-background py-16 sm:py-20">
+      <section className="border-b border-border bg-background py-20 sm:py-24">
         <Container>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Brands</p>
-          <h1 className="mt-4 max-w-3xl font-sans text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+          <h1 className="mt-5 max-w-4xl font-sans text-5xl font-bold tracking-tight text-foreground sm:text-[3.45rem] sm:leading-[1.08]">
             Manufacturers we stand behind
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
+          <p className="mt-7 max-w-2xl text-lg leading-relaxed text-muted">
             {site.name} works with manufacturers who invest in product quality, documentation, and
             supply reliability—the partners below represent the lines we regularly stock and source
             for builders and contractors across Ontario.
@@ -38,7 +38,7 @@ export default function BrandsPage() {
         </Container>
       </section>
 
-      <section className="bg-card py-16 sm:py-20">
+      <section className="bg-card py-20 sm:py-24">
         <Container>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {trustedManufacturers.map((m, i) => (
@@ -50,7 +50,7 @@ export default function BrandsPage() {
         </Container>
       </section>
 
-      <section className="border-t border-border bg-background py-16">
+      <section className="border-t border-border bg-background py-20">
         <Container className="max-w-3xl">
           <h2 className="font-sans text-2xl font-semibold tracking-tight text-foreground">
             Sourcing that supports specifications

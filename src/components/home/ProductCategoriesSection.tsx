@@ -7,7 +7,7 @@ import { productCategories } from "@/lib/product-categories";
 
 export function ProductCategoriesSection() {
   return (
-    <section className="border-b border-border bg-background py-20 sm:py-24">
+    <section className="border-b border-border bg-background py-24 sm:py-28">
       <Container>
         <SectionHeading
           eyebrow="Product categories"
@@ -15,20 +15,20 @@ export function ProductCategoriesSection() {
           description="A focused lineup of siding and exterior materials—organized for specification, ordering, and field coordination across residential and commercial builds."
         />
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {productCategories.map((cat, i) => (
             <MotionReveal key={cat.slug} delay={i * 0.05}>
               <Link
                 href={`/products#${cat.slug}`}
-                className="group flex h-full flex-col border border-border bg-card p-6 shadow-sm transition-shadow hover:shadow-md"
+                className="group flex h-full flex-col rounded-md border border-border bg-card p-7 shadow-[0_1px_2px_rgba(25,24,23,0.06)] transition-[transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_28px_-20px_rgba(25,24,23,0.35)]"
               >
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-sm border border-border bg-zinc-50 transition-colors group-hover:border-accent/30 group-hover:bg-accent-muted">
+                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-md border border-border bg-zinc-50 transition-colors group-hover:border-accent/30 group-hover:bg-accent-muted">
                   <ProductCategoryIcon name={cat.icon} />
                 </div>
-                <h3 className="font-sans text-lg font-semibold tracking-tight text-foreground">
+                <h3 className="font-sans text-xl font-semibold tracking-tight text-foreground">
                   {cat.title}
                 </h3>
-                <p className="mt-2 flex-1 text-[15px] leading-relaxed text-muted">
+                <p className="mt-3 flex-1 text-[15px] leading-relaxed text-muted">
                   {cat.shortDescription}
                 </p>
                 <span className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-accent">

@@ -7,7 +7,7 @@ import { trustedManufacturers } from "@/lib/brands";
 
 export function TrustedManufacturersSection() {
   return (
-    <section className="border-b border-border bg-background py-20 sm:py-24">
+    <section className="border-b border-border bg-background py-24 sm:py-28">
       <Container>
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">

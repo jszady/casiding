@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/Button";
 
 const inputClass =
-  "w-full rounded-md border border-border bg-background px-4 py-3 text-[15px] text-foreground shadow-[0_1px_2px_rgba(28,25,23,0.04)] outline-none transition-[border-color,box-shadow,background-color] duration-200 placeholder:text-muted/55 hover:border-stone-300/90 hover:bg-card focus:border-accent focus:bg-card focus:shadow-[0_0_0_3px_var(--accent-muted)]";
+  "w-full rounded-md border border-border bg-background px-4 py-3 text-[15px] text-foreground shadow-[0_1px_2px_rgba(25,24,23,0.04)] outline-none transition-[border-color,box-shadow,transform,background-color] duration-200 placeholder:text-muted/55 hover:-translate-y-px hover:border-stone-300/90 hover:bg-card focus:border-accent focus:bg-card focus:shadow-[0_0_0_3px_var(--accent-muted)]";
 
 const labelClass = "text-sm font-medium text-foreground";
 

@@ -14,13 +14,13 @@ export const metadata: Metadata = {
 export default function WhoWeServePage() {
   return (
     <main>
-      <section className="border-b border-border bg-background py-16 sm:py-20">
+      <section className="border-b border-border bg-background py-20 sm:py-24">
         <Container>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Who we serve</p>
-          <h1 className="mt-4 max-w-3xl font-sans text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+          <h1 className="mt-5 max-w-4xl font-sans text-5xl font-bold tracking-tight text-foreground sm:text-[3.45rem] sm:leading-[1.08]">
             Materials support for professional project teams
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
+          <p className="mt-7 max-w-2xl text-lg leading-relaxed text-muted">
             {site.name} is structured for trade buyers—clear communication, documentation, and
             supply coordination that respects how bids, schedules, and site work actually unfold.
           </p>
@@ -36,13 +36,13 @@ export default function WhoWeServePage() {
         </Container>
       </section>
 
-      <section className="bg-card py-16 sm:py-20">
+      <section className="bg-card py-20 sm:py-24">
         <Container>
           <div className="grid gap-6 md:grid-cols-2">
             {audiences.map((a, i) => (
               <MotionReveal key={a.title} delay={i * 0.04}>
-                <article className="h-full border border-border bg-background p-8">
-                  <h2 className="font-sans text-2xl font-semibold tracking-tight text-foreground">
+                <article className="h-full rounded-md border border-border bg-background p-9 shadow-[0_1px_2px_rgba(25,24,23,0.05)] transition-[transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_28px_-20px_rgba(25,24,23,0.32)]">
+                  <h2 className="font-sans text-[1.9rem] font-semibold tracking-tight text-foreground">
                     {a.title}
                   </h2>
                   <p className="mt-4 text-[15px] leading-relaxed text-muted">{a.description}</p>
@@ -53,7 +53,7 @@ export default function WhoWeServePage() {
         </Container>
       </section>
 
-      <section className="border-t border-border bg-background py-16">
+      <section className="border-t border-border bg-background py-20">
         <Container className="max-w-3xl">
           <h2 className="font-sans text-2xl font-semibold tracking-tight text-foreground">
             How we collaborate

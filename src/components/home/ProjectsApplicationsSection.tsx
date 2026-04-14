@@ -6,7 +6,7 @@ import { applications } from "@/lib/projects-applications";
 
 export function ProjectsApplicationsSection() {
   return (
-    <section className="border-b border-border bg-background py-20 sm:py-24">
+    <section className="border-b border-border bg-background py-24 sm:py-28">
       <Container>
         <div className="mb-12 flex flex-col gap-8 sm:mb-16 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl space-y-4">
@@ -29,10 +29,10 @@ export function ProjectsApplicationsSection() {
           </Link>
         </div>
 
-        <div className="grid gap-5 lg:grid-cols-2">
+        <div className="grid gap-6 lg:grid-cols-2">
           {applications.map((app, i) => (
             <MotionReveal key={app.id} delay={i * 0.05}>
-              <article className="group overflow-hidden border border-border bg-card shadow-sm">
+              <article className="group overflow-hidden rounded-md border border-border bg-card shadow-[0_1px_2px_rgba(25,24,23,0.06)] transition-[transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_28px_-20px_rgba(25,24,23,0.32)]">
                 <div className="relative aspect-[16/10] overflow-hidden bg-zinc-200">
                   <Image
                     src={app.image}
@@ -42,8 +42,8 @@ export function ProjectsApplicationsSection() {
                     className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
                   />
                 </div>
-                <div className="space-y-2 p-6">
-                  <h3 className="font-sans text-xl font-semibold tracking-tight text-foreground">
+                <div className="space-y-2 p-7">
+                  <h3 className="font-sans text-2xl font-semibold tracking-tight text-foreground">
                     {app.title}
                   </h3>
                   <p className="text-[15px] leading-relaxed text-muted">{app.summary}</p>

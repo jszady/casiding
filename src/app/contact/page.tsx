@@ -12,25 +12,25 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <main>
-      <section className="border-b border-border bg-background py-20 sm:py-24 lg:py-28">
+      <section className="border-b border-border bg-background py-24 sm:py-28 lg:py-32">
         <Container>
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-accent">Contact</p>
-          <h1 className="mt-5 max-w-3xl font-sans text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-[3.25rem] lg:leading-[1.1]">
+          <h1 className="mt-5 max-w-4xl font-sans text-5xl font-bold tracking-tight text-foreground sm:text-[3.45rem] lg:text-[3.85rem] lg:leading-[1.06]">
             Let&apos;s scope your next exterior package
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl sm:leading-relaxed">
+          <p className="mt-7 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl sm:leading-relaxed">
             Trade-focused quotes, takeoffs, and product guidance—tell us about the job and we&apos;ll
             respond with clear next steps.
           </p>
         </Container>
       </section>
 
-      <section className="bg-card py-16 sm:py-20 lg:py-24">
+      <section className="bg-card py-20 sm:py-24 lg:py-28">
         <Container>
           <div className="grid gap-14 lg:grid-cols-12 lg:gap-16 xl:gap-20">
-            <div className="flex flex-col gap-10 lg:col-span-5">
+            <div className="order-2 flex flex-col gap-10 lg:order-1 lg:col-span-5">
               <div>
-                <h2 className="font-sans text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
+                <h2 className="font-sans text-xs font-semibold uppercase tracking-[0.2em] text-muted">
                   Contact information
                 </h2>
                 <p className="mt-4 max-w-md text-[15px] leading-relaxed text-muted">
@@ -40,8 +40,8 @@ export default function ContactPage() {
               </div>
 
               <div className="space-y-6">
-                <div className="rounded-lg border border-border bg-background p-6 sm:p-7">
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-stone-500">
+                <div className="rounded-md border border-border bg-background p-6 sm:p-7">
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
                     Phone
                   </p>
                   <a
@@ -52,8 +52,8 @@ export default function ContactPage() {
                   </a>
                 </div>
 
-                <div className="rounded-lg border border-border bg-background p-6 sm:p-7">
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-stone-500">
+                <div className="rounded-md border border-border bg-background p-6 sm:p-7">
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
                     Address
                   </p>
                   <address className="mt-3 not-italic font-sans text-[15px] leading-relaxed text-foreground">
@@ -71,8 +71,8 @@ export default function ContactPage() {
                   </a>
                 </div>
 
-                <div className="rounded-lg border border-border bg-background p-6 sm:p-7">
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-stone-500">
+                <div className="rounded-md border border-border bg-background p-6 sm:p-7">
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
                     Email
                   </p>
                   <a
@@ -84,8 +84,8 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="rounded-lg border border-dashed border-border bg-background/80 px-6 py-5 sm:px-7">
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-stone-500">
+              <div className="rounded-md border border-dashed border-border bg-background/80 px-6 py-5 sm:px-7">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
                   Business hours
                 </p>
                 <p className="mt-3 text-[15px] leading-relaxed text-muted">
@@ -108,8 +108,8 @@ export default function ContactPage() {
               </Link>
             </div>
 
-            <div className="lg:col-span-7">
-              <div className="rounded-xl border border-border bg-background p-8 shadow-[0_1px_3px_rgba(28,25,23,0.06)] sm:p-10 lg:p-12">
+            <div className="order-1 lg:order-2 lg:col-span-7">
+              <div className="rounded-lg border border-border bg-background p-8 shadow-[0_1px_2px_rgba(25,24,23,0.05)] sm:p-10 lg:p-12">
                 <div className="border-b border-border pb-8">
                   <h2 className="font-sans text-2xl font-semibold tracking-tight text-foreground">
                     Request a quote

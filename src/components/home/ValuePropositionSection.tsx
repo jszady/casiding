@@ -31,7 +31,7 @@ const points = [
 
 export function ValuePropositionSection() {
   return (
-    <section className="border-b border-border bg-card py-20 sm:py-24">
+    <section className="border-b border-border bg-card py-24 sm:py-28">
       <Container>
         <SectionHeading
           eyebrow="Why CA Siding"
@@ -44,9 +44,9 @@ export function ValuePropositionSection() {
             <MotionReveal
               key={item.title}
               delay={i * 0.05}
-              className="border border-border bg-background p-6"
+              className="h-full rounded-md border border-border bg-background p-7 transition-[transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_28px_-20px_rgba(25,24,23,0.32)]"
             >
-              <h3 className="font-sans text-lg font-semibold tracking-tight text-foreground">
+              <h3 className="font-sans text-xl font-semibold tracking-tight text-foreground">
                 {item.title}
               </h3>
               <p className="mt-3 text-[15px] leading-relaxed text-muted">{item.body}</p>
