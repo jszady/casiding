@@ -41,6 +41,7 @@ export const trustedManufacturers: TrustedManufacturer[] = [
     mark: "CC",
     focus: "PVC & specialty profiles",
     logoPath: brandLogo("/images/capecodsiding.jpg"),
+    brandColor: "#3d5a5c",
   },
   {
     id: "james-hardie",
@@ -64,6 +65,7 @@ export const trustedManufacturers: TrustedManufacturer[] = [
     mark: "FP",
     focus: "Engineered cladding systems",
     logoPath: brandLogo("/images/fastplank.jpg"),
+    brandColor: "#454954",
   },
   {
     id: "timbertech",
