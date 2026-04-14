@@ -3,9 +3,20 @@ export type TrustedManufacturer = {
   name: string;
   mark: string;
   focus: string;
-  /** Muted brand tint; revealed when grayscale filter lifts on hover */
+  logoPath?: string;
+  /** Accent tint for brand name */
   brandColor: string;
 };
+
+/**
+ * Same-path logo updates are cached by the browser and by Next.js `next/image`.
+ * Bump this whenever you replace a file under `/public/images/` without renaming.
+ */
+export const BRAND_LOGO_ASSET_VERSION = "2";
+
+function brandLogo(path: string) {
+  return `${path}?v=${BRAND_LOGO_ASSET_VERSION}`;
+}
 
 export const trustedManufacturers: TrustedManufacturer[] = [
   {
@@ -13,6 +24,7 @@ export const trustedManufacturers: TrustedManufacturer[] = [
     name: "NewTechWood",
     mark: "NTW",
     focus: "Composite cladding & decking",
+    logoPath: brandLogo("/images/Newtechwood.jpg"),
     brandColor: "#3d5245",
   },
   {
@@ -20,6 +32,7 @@ export const trustedManufacturers: TrustedManufacturer[] = [
     name: "Maibec",
     mark: "MB",
     focus: "Wood siding & shingles",
+    logoPath: brandLogo("/images/maibec-logo.webp"),
     brandColor: "#5c4a3d",
   },
   {
@@ -27,13 +40,14 @@ export const trustedManufacturers: TrustedManufacturer[] = [
     name: "Cape Cod Siding",
     mark: "CC",
     focus: "PVC & specialty profiles",
-    brandColor: "#3d5a5c",
+    logoPath: brandLogo("/images/capecodsiding.jpg"),
   },
   {
     id: "james-hardie",
     name: "James Hardie",
     mark: "JH",
     focus: "Fiber cement & trim",
+    logoPath: brandLogo("/images/jameshardie.jpg"),
     brandColor: "#6b4038",
   },
   {
@@ -41,6 +55,7 @@ export const trustedManufacturers: TrustedManufacturer[] = [
     name: "Ready Pine",
     mark: "RP",
     focus: "Pre-finished wood siding",
+    logoPath: brandLogo("/images/readypine.jpg"),
     brandColor: "#5c573d",
   },
   {
@@ -48,13 +63,14 @@ export const trustedManufacturers: TrustedManufacturer[] = [
     name: "FastPlank",
     mark: "FP",
     focus: "Engineered cladding systems",
-    brandColor: "#454954",
+    logoPath: brandLogo("/images/fastplank.jpg"),
   },
   {
     id: "timbertech",
     name: "TimberTech",
     mark: "TT",
     focus: "Composite decking & railing",
+    logoPath: brandLogo("/images/timbertech.jpg"),
     brandColor: "#3d4d42",
   },
   {
@@ -62,6 +78,7 @@ export const trustedManufacturers: TrustedManufacturer[] = [
     name: "Trex",
     mark: "TX",
     focus: "Composite decking",
+    logoPath: brandLogo("/images/trex-logo.jpg"),
     brandColor: "#2f4550",
   },
   {
@@ -69,6 +86,7 @@ export const trustedManufacturers: TrustedManufacturer[] = [
     name: "LP Siding",
     mark: "LP",
     focus: "Engineered wood siding",
+    logoPath: brandLogo("/images/LA.jpg"),
     brandColor: "#6b5238",
   },
 ];
