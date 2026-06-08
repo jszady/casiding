@@ -7,7 +7,8 @@ import { ManufacturerPartnerCard } from "@/components/brands/ManufacturerPartner
 import { trustedManufacturers } from "@/lib/brands";
 import { site } from "@/lib/site";
 
-const description = `Manufacturer partnerships and trusted siding suppliers through ${site.name}—quality exterior materials and dependable sourcing for builders and contractors in Ontario.`;
+const description =
+  "CA Building Supply partners with James Hardie, Maibec, NewTechWood, LP Siding, Trex, and more. Quality-vetted manufacturers for exterior professionals.";
 
 export const metadata: Metadata = {
   title: "Brands & Manufacturers",

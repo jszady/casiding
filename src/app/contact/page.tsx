@@ -4,7 +4,8 @@ import { ContactForm } from "@/components/forms/ContactForm";
 import { Container } from "@/components/ui/Container";
 import { site } from "@/lib/site";
 
-const description = `Contact ${site.name} for siding and exterior product quotes, technical questions, and availability—serving builders, contractors, and developers across Ontario.`;
+const description =
+  "Contact CA Building Supply to request a quote or discuss your exterior project. Serving Ontario builders and contractors from our Vaughan, ON location.";
 
 export const metadata: Metadata = {
   title: "Contact · Request a Quote",

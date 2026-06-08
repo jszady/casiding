@@ -7,7 +7,8 @@ import { Container } from "@/components/ui/Container";
 import { applications } from "@/lib/projects-applications";
 import { site } from "@/lib/site";
 
-const description = `See how ${site.name} exterior and siding products apply to custom homes, new builds, multi-unit residential, commercial facades, and architectural projects across Ontario.`;
+const description =
+  "See how CA Building Supply products are used across custom homes, new builds, multi-unit residential, and commercial exterior applications in Ontario.";
 
 export const metadata: Metadata = {
   title: "Projects & Applications",

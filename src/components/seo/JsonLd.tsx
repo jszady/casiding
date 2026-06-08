@@ -4,16 +4,11 @@ const SITE_URL = "https://www.cabuildingsupply.ca";
 
 const businessAddress = {
   "@type": "PostalAddress",
-  streetAddress: site.office.street,
+  streetAddress: "60 Caster Avenue, Suite 201",
   addressLocality: "Vaughan",
   addressRegion: "ON",
   postalCode: site.office.postal,
   addressCountry: "CA",
-};
-
-const areaServed = {
-  "@type": "AdministrativeArea",
-  name: "Ontario",
 };
 
 export function OrganizationJsonLd() {
@@ -26,7 +21,7 @@ export function OrganizationJsonLd() {
     email: site.email,
     telephone: "+14166971948",
     address: businessAddress,
-    areaServed,
+    areaServed: "Ontario",
   };
 
   return (
@@ -42,12 +37,14 @@ export function LocalBusinessJsonLd() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "CA Building Supply",
-    description: site.tagline,
     url: SITE_URL,
+    telephone: "416-697-1948",
     email: site.email,
-    telephone: "+14166971948",
     address: businessAddress,
-    areaServed,
+    openingHours: "Mo-Fr 08:00-17:00",
+    areaServed: "Ontario",
+    description:
+      "Exterior building materials supplier specializing in siding, soffit, fascia, and trim products for builders and contractors across Ontario.",
     image: `${SITE_URL}/images/hero-exterior.jpg`,
   };
 

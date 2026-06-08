@@ -6,7 +6,8 @@ import { Container } from "@/components/ui/Container";
 import { audiences } from "@/lib/who-we-serve";
 import { site } from "@/lib/site";
 
-const description = `${site.name} supports builders, contractors, developers, and exterior trades with siding supply, manufacturer access, and project-aligned service across Ontario.`;
+const description =
+  "CA Building Supply serves production builders, exterior contractors, developers, and commercial teams across Ontario with reliable exterior product sourcing.";
 
 export const metadata: Metadata = {
   title: "Who We Serve",

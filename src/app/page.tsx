@@ -11,7 +11,8 @@ import { WhoWeServePreview } from "@/components/home/WhoWeServePreview";
 import { LocalBusinessJsonLd } from "@/components/seo/JsonLd";
 import { site } from "@/lib/site";
 
-const description = `${site.name} supplies premium siding and exterior materials to builders, contractors, and developers—trusted sourcing, manufacturer partnerships, and professional support across Ontario.`;
+const description =
+  "CA Building Supply stocks vinyl, aluminum, and fiber cement siding for builders and contractors across Ontario. Reliable sourcing, fast turnaround, GTA-based.";
 
 export const metadata: Metadata = {
   title: "Siding & Exterior Building Products Supply",

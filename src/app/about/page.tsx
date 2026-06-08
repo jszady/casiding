@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { site } from "@/lib/site";
 
-const description = `About ${site.name}—a building materials supplier focused on siding and exterior products, manufacturer relationships, and dependable sourcing for professional buyers across Ontario.`;
+const description =
+  "CA Building Supply is a Vaughan, Ontario-based exterior materials supplier. We provide builders and contractors with trusted sourcing, manufacturer relationships, and responsive support.";
 
 export const metadata: Metadata = {
   title: "About",

@@ -7,7 +7,8 @@ import { Container } from "@/components/ui/Container";
 import { productCategories } from "@/lib/product-categories";
 import { site } from "@/lib/site";
 
-const description = `Browse siding and exterior building products from ${site.name}—vinyl, aluminum, fiber cement, soffit & fascia, trim, and specialty materials for builders and contractors.`;
+const description =
+  "Browse CA Building Supply's full range of exterior cladding — vinyl siding, aluminum, fiber cement, soffit, fascia, trim, and specialty products for professional builds.";
 
 export const metadata: Metadata = {
   title: "Siding & Exterior Products",
