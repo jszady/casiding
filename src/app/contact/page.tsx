@@ -4,9 +4,33 @@ import { ContactForm } from "@/components/forms/ContactForm";
 import { Container } from "@/components/ui/Container";
 import { site } from "@/lib/site";
 
+const description = `Contact ${site.name} for siding and exterior product quotes, technical questions, and availability—serving builders, contractors, and developers across Ontario.`;
+
 export const metadata: Metadata = {
   title: "Contact · Request a Quote",
-  description: `Contact ${site.name} for siding and exterior product quotes, technical questions, and availability—serving builders, contractors, and developers across Ontario.`,
+  description,
+  alternates: {
+    canonical: "https://www.cabuildingsupply.ca/contact",
+  },
+  openGraph: {
+    title: `Contact · Request a Quote | ${site.name}`,
+    description,
+    url: "https://www.cabuildingsupply.ca/contact",
+    images: [
+      {
+        url: "/images/hero-exterior.jpg",
+        width: 1200,
+        height: 900,
+        alt: "Modern building exterior with premium siding and cladding panels",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Contact · Request a Quote | ${site.name}`,
+    description,
+  },
 };
 
 export default function ContactPage() {

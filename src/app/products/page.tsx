@@ -7,9 +7,33 @@ import { Container } from "@/components/ui/Container";
 import { productCategories } from "@/lib/product-categories";
 import { site } from "@/lib/site";
 
+const description = `Browse siding and exterior building products from ${site.name}—vinyl, aluminum, fiber cement, soffit & fascia, trim, and specialty materials for builders and contractors.`;
+
 export const metadata: Metadata = {
   title: "Siding & Exterior Products",
-  description: `Browse siding and exterior building products from ${site.name}—vinyl, aluminum, fiber cement, soffit & fascia, trim, and specialty materials for builders and contractors.`,
+  description,
+  alternates: {
+    canonical: "https://www.cabuildingsupply.ca/products",
+  },
+  openGraph: {
+    title: `Siding & Exterior Products | ${site.name}`,
+    description,
+    url: "https://www.cabuildingsupply.ca/products",
+    images: [
+      {
+        url: "/images/hero-exterior.jpg",
+        width: 1200,
+        height: 900,
+        alt: "Modern building exterior with premium siding and cladding panels",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Siding & Exterior Products | ${site.name}`,
+    description,
+  },
 };
 
 export default function ProductsPage() {

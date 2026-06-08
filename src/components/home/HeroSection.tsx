@@ -60,7 +60,7 @@ export function HeroSection() {
           >
             <Image
               src={heroImage}
-              alt="Modern commercial and architectural building exterior with glass and cladding"
+              alt="Modern building exterior with premium siding panels and architectural cladding detail"
               fill
               priority
               sizes="(min-width: 1024px) 50vw, 100vw"

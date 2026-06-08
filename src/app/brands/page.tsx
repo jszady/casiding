@@ -7,9 +7,33 @@ import { ManufacturerPartnerCard } from "@/components/brands/ManufacturerPartner
 import { trustedManufacturers } from "@/lib/brands";
 import { site } from "@/lib/site";
 
+const description = `Manufacturer partnerships and trusted siding suppliers through ${site.name}—quality exterior materials and dependable sourcing for builders and contractors in Ontario.`;
+
 export const metadata: Metadata = {
   title: "Brands & Manufacturers",
-  description: `Manufacturer partnerships and trusted siding suppliers through ${site.name}—quality exterior materials and dependable sourcing for builders and contractors in Ontario.`,
+  description,
+  alternates: {
+    canonical: "https://www.cabuildingsupply.ca/brands",
+  },
+  openGraph: {
+    title: `Brands & Manufacturers | ${site.name}`,
+    description,
+    url: "https://www.cabuildingsupply.ca/brands",
+    images: [
+      {
+        url: "/images/hero-exterior.jpg",
+        width: 1200,
+        height: 900,
+        alt: "Modern building exterior with premium siding and cladding panels",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Brands & Manufacturers | ${site.name}`,
+    description,
+  },
 };
 
 export default function BrandsPage() {

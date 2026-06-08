@@ -7,9 +7,33 @@ import { Container } from "@/components/ui/Container";
 import { applications } from "@/lib/projects-applications";
 import { site } from "@/lib/site";
 
+const description = `See how ${site.name} exterior and siding products apply to custom homes, new builds, multi-unit residential, commercial facades, and architectural projects across Ontario.`;
+
 export const metadata: Metadata = {
   title: "Projects & Applications",
-  description: `See how ${site.name} exterior and siding products apply to custom homes, new builds, multi-unit residential, commercial facades, and architectural projects across Ontario.`,
+  description,
+  alternates: {
+    canonical: "https://www.cabuildingsupply.ca/projects",
+  },
+  openGraph: {
+    title: `Projects & Applications | ${site.name}`,
+    description,
+    url: "https://www.cabuildingsupply.ca/projects",
+    images: [
+      {
+        url: "/images/hero-exterior.jpg",
+        width: 1200,
+        height: 900,
+        alt: "Modern building exterior with premium siding and cladding panels",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Projects & Applications | ${site.name}`,
+    description,
+  },
 };
 
 export default function ProjectsPage() {

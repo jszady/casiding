@@ -5,9 +5,33 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { site } from "@/lib/site";
 
+const description = `About ${site.name}—a building materials supplier focused on siding and exterior products, manufacturer relationships, and dependable sourcing for professional buyers across Ontario.`;
+
 export const metadata: Metadata = {
   title: "About",
-  description: `About ${site.name}—a building materials supplier focused on siding and exterior products, manufacturer relationships, and dependable sourcing for professional buyers across Ontario.`,
+  description,
+  alternates: {
+    canonical: "https://www.cabuildingsupply.ca/about",
+  },
+  openGraph: {
+    title: `About | ${site.name}`,
+    description,
+    url: "https://www.cabuildingsupply.ca/about",
+    images: [
+      {
+        url: "/images/hero-exterior.jpg",
+        width: 1200,
+        height: 900,
+        alt: "Modern building exterior with premium siding and cladding panels",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `About | ${site.name}`,
+    description,
+  },
 };
 
 export default function AboutPage() {

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { SiteShell } from "@/components/layout/SiteShell";
@@ -10,18 +10,38 @@ const jakarta = Plus_Jakarta_Sans({
   variable: "--font-sans",
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.casiding.ca"),
+  metadataBase: new URL("https://www.cabuildingsupply.ca"),
   title: {
     default: `${site.name} | Siding & Exterior Building Products Supplier`,
     template: `%s | ${site.name}`,
   },
   description: site.tagline,
   openGraph: {
-    title: `${site.name} | Building Products Supply`,
+    title: `${site.name} | Siding & Exterior Building Products Supplier`,
     description: site.tagline,
+    url: "https://www.cabuildingsupply.ca",
+    siteName: "CA Building Supply",
     locale: "en_CA",
     type: "website",
+    images: [
+      {
+        url: "/images/hero-exterior.jpg",
+        width: 1200,
+        height: 900,
+        alt: "Modern building exterior with premium siding and cladding panels",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${site.name} | Siding & Exterior Building Products Supplier`,
+    description: site.tagline,
   },
 };
 

@@ -6,9 +6,33 @@ import { Container } from "@/components/ui/Container";
 import { audiences } from "@/lib/who-we-serve";
 import { site } from "@/lib/site";
 
+const description = `${site.name} supports builders, contractors, developers, and exterior trades with siding supply, manufacturer access, and project-aligned service across Ontario.`;
+
 export const metadata: Metadata = {
   title: "Who We Serve",
-  description: `${site.name} supports builders, contractors, developers, and exterior trades with siding supply, manufacturer access, and project-aligned service across Ontario.`,
+  description,
+  alternates: {
+    canonical: "https://www.cabuildingsupply.ca/who-we-serve",
+  },
+  openGraph: {
+    title: `Who We Serve | ${site.name}`,
+    description,
+    url: "https://www.cabuildingsupply.ca/who-we-serve",
+    images: [
+      {
+        url: "/images/hero-exterior.jpg",
+        width: 1200,
+        height: 900,
+        alt: "Modern building exterior with premium siding and cladding panels",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Who We Serve | ${site.name}`,
+    description,
+  },
 };
 
 export default function WhoWeServePage() {
